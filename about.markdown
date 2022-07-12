@@ -4,15 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hello! I'm maanrit, a software engineer and data scientist. I've been lucky enough to complete both a masters and Ph.d. in computer science, largely focussing on data science and artificial intelligence over the last 15 or so years. 
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I [like to think] I have professional interests in a wide variety areas, including (in no particular order), algorithms, machine learning, agent based systems, data compression, software engineering, (small 'a') agile, and many more.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Outside work-life, I enjoy photography and cycling - they may feature here too.
 
-
-[jekyll-organization]: https://github.com/jekyll
+I'm on twitter: [@maanrit](https://twitter.com/maanrit), and that's it.
