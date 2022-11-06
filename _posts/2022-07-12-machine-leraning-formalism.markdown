@@ -10,8 +10,15 @@ hasmath: true
 
 Some text
 
-$$a = b$$
+$$a = b, \\
+y = x
+$$
 
 and some pther stuff
 
-and a cdot: \\(a = b \cdot\\)?
+and a cdot: $$a = b \cdot$$?
+
+
+\begin{equation}
+ x = y
+\end{equation}
