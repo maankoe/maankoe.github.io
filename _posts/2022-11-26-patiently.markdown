@@ -1,17 +1,18 @@
 ---
 layout: post
-title:  "Patiently - assertions for threaded tasks"
+title:  "Patiently - a polling/retry mechanism"
 date:   2022-11-25
-categories: testing, async
+categories: testing, async, java
 ---
 
 
 # Introduction
 
-Patiently retries method calls on a given schedule until they are successful (the method returns without throwing an Exception), or until the schedule finished (a time limit has been reached).
+[Patiently](https://github.com/maankoe/patiently) is a java library that retries tasks on a given schedule until they are successful (they return successfully without throwing an Exception), or until the schedule finished (a time limit has been reached).
 
 It's predominant use-case, for me, is to simplify testing some threaded tasks and avoid having to mock things I don't want to. Beyond testing, Patiently can be used as a general polling/retry mechanism.
 
+It's available on GitHub: [https://github.com/maankoe/patiently](https://github.com/maankoe/patiently).
 
 
 # Disclaimer
