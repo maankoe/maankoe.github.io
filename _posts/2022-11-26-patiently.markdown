@@ -12,7 +12,7 @@ categories: testing, async, java
 
 It's predominant use-case, for me, is to simplify testing some threaded tasks and avoid having to mock things I don't want to. Beyond testing, Patiently can be used as a general polling/retry mechanism.
 
-It's available on GitHub: [https://github.com/maankoe/patiently](https://github.com/maankoe/patiently).
+It's available on GitHub: [https://github.com/maankoe/patiently](https://maankoe.github.io/testing,/async/2022/11/25/patiently.html).
 
 
 # Disclaimer
@@ -68,9 +68,4 @@ Some interesting extensions to Patiently would be:
 
 
 Though unless there is a need (internal or external), it's unlikely I'll be doing these in the near future.
-
-
-
-
-
 
