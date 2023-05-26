@@ -2,7 +2,7 @@
 layout: post
 title:  "Patiently - a polling/retry mechanism"
 date:   2022-11-30
-categories: testing, async, java
+categories: testing async java
 ---
 
 

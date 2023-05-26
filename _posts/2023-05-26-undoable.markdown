@@ -2,7 +2,7 @@
 layout: post
 title:  "Undoable - a decorated undo stack"
 date:   2023-05-26
-categories: decorators, python, state
+categories: decorators python state
 ---
 
 # Introduction
