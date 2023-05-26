@@ -12,15 +12,16 @@ categories: testing, async, java
 
 It's predominant use-case, for me, is to simplify testing some threaded tasks and avoid having to mock things I don't want to. Beyond testing, Patiently can be used as a general polling/retry mechanism.
 
-It's available on GitHub: [https://github.com/maankoe/patiently](https://maankoe.github.io/testing,/async/2022/11/25/patiently.html).
+It's available on GitHub: [https://github.com/maankoe/patiently](https://github.com/maankoe/patiently).
 
 
 # Disclaimer
 
-In no way do I endorse this approach to testing. It is generally considered bad practice to use `Thread.sleep()`, you're probably better off mocking the thing you're testing. [Here is Sonarlint's opinion on it.](https://rules.sonarsource.com/java/RSPEC-2925), which also suggests [awaitatility](http://www.awaitility.org) as a "compliant solution". Awaitatility is clearly more mature than [Patiently](https://github.com/maankoe/patiently). From what I can see, [Patience](https://github.com/redfin/patience) is also a strong alternative.
+In no way do I endorse this approach to testing. It is generally considered bad practice to use `Thread.sleep()`, you're probably better off mocking the thing you're testing. 
+[Here is Sonarlint's opinion on it.](https://rules.sonarsource.com/java/RSPEC-2925), which also suggests [awaitatility](http://www.awaitility.org) as a "compliant solution". 
+Awaitatility is clearly more mature than [Patiently](https://github.com/maankoe/patiently). From what I can see, [Patience](https://github.com/redfin/patience) is also a strong alternative.
 
-Having said that, I enjoyed making it and I'm using it in [TimberTally](https://github.com/maankoe/timbertally, should you be interested.
-
+Having said that, I enjoyed making it and I'm using it in [FluxTail](https://github.com/maankoe/flux-tail), should you be interested.
 
 
 # Usage

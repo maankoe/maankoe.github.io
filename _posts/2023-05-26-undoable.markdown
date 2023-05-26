@@ -1,0 +1,137 @@
+---
+layout: post
+title:  "Undoable - a decorated undo stack"
+date:   2023-05-26
+categories: decorators, python, state
+---
+
+# Introduction
+
+I enjoy playing with state in programming. 
+The more pointless, (often) the better.
+Python's accessible introspection and reflection offers nice opportunities for exploration.
+In just a few lines you can find out the members (methods and variables) an object has, make copies, and decorate their behaviours.
+
+So, here's [Undoable](https://github.com/maankoe/undoable): An undo stack for objects via decoration or extension.
+
+The code is available here: [https://github.com/maankoe/undoable](https://github.com/maankoe/undoable)
+
+# Usage
+
+You can use it by decorating the class with `@unndoable($variable)`, to add an undo stack for `$variable`, for example:
+
+```
+@undoable("x")
+class State:
+    def __init__(self, x):
+        self.x = x
+```
+
+After this decoration, a `State` object will have two new methods, `undo()`, which undoes any change to `State.x`
+and `redo()`, which redoes that change.
+
+```
+state = Stateful(1)   # state.x == 1
+state.x = 2           # state.x == 2
+state.x = 3           # state.x == 3
+state.undo()          # state.x == 2
+state.redo()          # state.x == 3
+state.undo()          # state.x == 2
+state.undo()          # state.x == 1
+```
+
+If decorating the whole class is too broad-brush, individual methods can be decorated (but of course, only their changes will go onto the stack).
+
+```
+class Stateful(Undoable):
+    def __init__(self, x):
+        super().__init__()
+        self.x = x
+
+    @undoable("x")
+    def set_x(self, x):
+        self.x = x
+```
+
+If undoable runs out of stack (undo or redo is called one too many times), an exception will be thrown.
+For undo:
+
+```
+state = Stateful(1)
+state.undo()          # raise IndexError - empty undo stack,
+```
+
+and redo:
+
+```
+state = Stateful(1)
+state.redo()          # raise IndexError - empty redo stack.
+```
+
+
+# Implementation
+
+The mechanics behind the scenes is to decorate each of the methods and maintain two stacks: `undo` and `redo`.
+When a class method is called, the current (before method execution) state is added to the undo stack.
+State is represented as a dictionary mapping the variable's name to it's value, i.e., `{$variable_name: $variable}`.
+When `undo()` is called, a copy (via `copy.copy`) of the current state is pushed onto the redo stack, then the undo stack is popped and the previous state is restored.
+When `redo()` is called, the opposite happens, the current state is pushed onto the undo stack, then the redo stack is popped and the state is restored.
+In the above example, we would have the following stacks:
+
+```
+state = Stateful(1)   # undo: [],                   redo: []
+state.x = 2           # undo: [{"x": 1}],           redo: []
+state.x = 3           # undo: [{"x": 1}, {"x": 2}], redo: []
+state.undo()          # undo: [{"x": 1}],           redo: [{"x": 3}]
+state.redo()          # undo: [{"x": 1}, {"x": 2}], redo: []
+state.undo()          # undo: [{"x": 1}],           redo: [{"x": 3}]
+state.undo()          # undo: [],                   redo: [{"x": 3}, {"x": 2}]
+```
+
+Given this representation, Undoable neatly can track multiple variables when they are provided as var-args, `@undoable("x", "y")`.
+Alternatively, all fields can be tracked by extending [Undoable](https://github.com/maankoe/undoable).
+
+```
+class Stateful(Undoable):
+    def __init__(self, x, y, z):
+        super().__init__()
+        self.x = x
+        self.y = y
+        self.z = z
+```
+
+
+# Limitations and extensions
+
+One limitation Undoable has is fields are tracked individually, rather than together. 
+This can be problematic if a method call changes multiple tracked variables, each change will be added to the stack individually.
+This means `undo` and `redo` only partially roll-back the effects of the method call.
+For instance, consider the following class:
+
+```
+@undoable("x", "y")
+class Stateful:
+    def __init__(self, x, y):
+        super().__init__()
+        self.x = x
+        self.y = y
+        
+    def operation(self, new_x, new_y):
+        self.x = new_x
+        self.y = new_y
+```
+
+Calling `Stateful.operation(..)` changes first `x` and then `y`, causing the stack and state to be as follows.
+
+```
+state = Stateful(1, 11)   # x==1, y==11, undo: [],                    redo: []
+state.operation(2, 12)    # x==2, y==12, undo: [{"x": 1}, {"y": 11}], redo: []
+state.undo()              # x==2, y==11, undo: [{"x": 1}],            redo: [{"y": 12}]
+state.redo()              # x==2, y==12, undo: [{"x": 1}, {"y": 11}], redo: []
+state.undo()              # x==2, y==11, undo: [{"x": 1}],            redo: [{"y": 12}]
+state.undo()              # x==1, y==11, undo: [],                    redo: [{"y": 12}, {"x": 2}]
+```
+
+Clearly then, an extension would be to have multiple variables inside each stack entry.
+
+Another extension that may be interesting is to allow dependency injection for `copy`, paving the way for `deepcopy` when needed or custom copy functions if desired.
