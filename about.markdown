@@ -10,4 +10,4 @@ I have professional interests in a wide variety areas, including (in no particul
 
 Outside work-life, I enjoy cycling and photography - they may feature here too.
 
-I'm on Mastodon: [@maankoe@techhub.social](https://techhub.social/@maankoe#), and my here is my [GitHub](https://github.com/maankoe).
+I'm on Mastodon: [@maankoe@techhub.social](https://techhub.social/@maankoe), and my here is my [GitHub](https://github.com/maankoe).
