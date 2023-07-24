@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Testing - a case for the pyramid"
+date:   2022-11-30
+categories: testing, async, java
+---
+
+
+# Introduction
+
+Usually, testing can be split into three categories:
+
+1. Unit testing - testing individual components (classes and functions)
+2. Integration testing - ensuring those components work together
+3. Regression testing - testing the correctness of output data
+
+Within these, smoke testing is really a form of integration testing (with a fail-fast quality), and functional testing lies somwhere in the middle of integration and regression testing.
+
+The number of tests a software system has of each form, creates a "shape" describing the testing philosophy employed.
+Pyramid testing has many unit tests, fewer integration tests, and fewer still regression tests.
+Diamond testing has a small number of unit and regression tests, but a large number of integration tests.
+Often, it requries a only a few regression tests to show the system is producing correct data.
+When this is not the case, hourglass testing can be useful, with large numbers of unit and regression tests and a smaller number of integration tests.
+
+The two main testing philosophies you often see discussed are pyramid and diamond.
+Lately, I have seen a few movements of a preference disamond testing, with integration testing being the priority.
+I believe this is as result of the movement to distributed systems, microservices, and the cloud.
+It is very tempting, once you have several systems working with one-another, to want to test them working together - as they do in production.
+In my opinion, this is incorrect, and pyramid testing (many more unit than integration tests) is almost always preferable.
+Here, I will set out why this is the case.
+
+
