@@ -124,7 +124,7 @@ Rebuilding reputation, if possible at all, is expensive.
 
 While I think AI agents will not take over software development, they do have great value as tools.
 
-* Learning a new langauge or framework? Ask AI to create a project with detailed notes guiding you through it.
+* Learning a new langauge or framework? Ask AI to create a project with a guide.
 * Starting a new project? Ask the agent to create a skeleton.
 * Need a quick script or *interal* tool? Put the agent in charge.
 * Tricky bug? See if AI to can make sense of the mess.
