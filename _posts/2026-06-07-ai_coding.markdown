@@ -26,7 +26,7 @@ I will attempt to write this as much in an off-the-dome style as possible, and d
 
 The models will get better, as will the harnesses.
 AI will improve to be more capable, handle larger contexts, and produce fewer errors.
-The harnesses will improve to interate on a problem better, hit fewer cycles - even with the smaller models.
+The harnesses will improve to iterate on a problem better, hit fewer cycles - even with the smaller models.
 We've seen this already - the smaller models like Haiku or GPT mini are sufficient for most tasks given a good harness.
 We might also finally be able to trust auto-approve and become more hands-off.
 
@@ -48,7 +48,7 @@ One quick example that comes to mind is [PewDiePie's odysseus](https://youtu.be/
 At the time of writing, the project just about 1 week old and has fewer than 1000 commits, but has over [550 open PRs](https://github.com/pewdiepie-archdaemon/odysseus/pulls?q=is%3Apr+is%3Aopen+). 
 That's a lot of activity!
 
-I suspect it won't just be Youtube stars that get carried away vibe coding, hardened developers will do it too.
+I suspect it won't just be YouTube stars that get carried away vibe coding, hardened developers will do it too.
 I've done it in a small sense, the number of personal or team utility scripts and tools has grown significantly in the last few months.
 Some developers, and managers, will convince themselves they can do the same with the actual product.
 Companies, big and small, will start projects and ship products or features that would never have been considered even a few months ago - it's cheap to create software!
@@ -57,7 +57,7 @@ Add in the insentivisation structure (mandating?) the use of AI agents, tokens, 
 I am not being negative here, there are many intractable problems are now economical to solve thanks to AI.
 The tools we've created are useful, and we've wanted some of them for a long time - now we suddenly have the resources to create them.
 I simply expect the industry to explode with "productivity", without care or second thought for what is being produced.
-What worries me is maintainin it all in the long term.
+What worries me is maintaining it all in the long term.
 Even our internal tools will take some time from us when they break for whatever reason.
 
 
@@ -90,7 +90,7 @@ I wonder at this point, if AI coding is still economically viable for most insti
 ### Conclusion: we'll realise it's not everything
 
 Here, I'm talking about more general software companies, not the AI giants.
-While software is cheap to create now we have AI, it does not mean it is cheap to maintain in the future - especailly if prices rise.
+While software is cheap to create now we have AI, it does not mean it is cheap to maintain in the future - especially if prices rise.
 Software systems take blood, toil, tears, and sweat to build and keep running.
 This has not changed in the world of agents.
 
@@ -124,9 +124,9 @@ Rebuilding reputation, if possible at all, is expensive.
 
 While I think AI agents will not take over software development, they do have great value as tools.
 
-* Learning a new langauge or framework? Ask AI to create a project with a guide.
+* Learning a new language or framework? Ask AI to create a project with a guide.
 * Starting a new project? Ask the agent to create a skeleton.
-* Need a quick script or *interal* tool? Put the agent in charge.
+* Need a quick script or *internal* tool? Put the agent in charge.
 * Tricky bug? See if AI to can make sense of the mess.
 
 I get it, I truly do - but it's a power tool, not a developer.
