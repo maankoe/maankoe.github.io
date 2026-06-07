@@ -22,7 +22,7 @@ I choose to write them here as a matter of record for myself, to come back to in
 I will attempt to write this as much in an off-the-dome style as possible, and do a light review at the end.
 
 
-## AI will improve
+### AI will improve
 
 The models will get better, as will the harnesses.
 AI will improve to be more capable, handle larger contexts, and produce fewer errors.
@@ -34,7 +34,7 @@ Having said this, it probably goes without saying: the iterative improvements (i
 I'll refrain from considering any RL developments, which could indeed bring another step-change.
 
 
-## More software, more features
+### More software, more features
 
 Historically, software has been expensive to create and maintain.
 It took huge teams of developers to produce, deploy, and keep large systems running.
@@ -61,7 +61,7 @@ What worries me is maintainin it all in the long term.
 Even our internal tools will take some time from us when they break for whatever reason.
 
 
-## More bugs and exploits
+### More bugs and exploits
 
 There are many laws of software development, but this now seems more relevant than ever: with more code comes more bugs.
 Software is now cheap to create with AI, so we're making more of it. 
@@ -72,7 +72,7 @@ Couple this with AI being [really good at finding exploits](https://www.wired.co
 I see continuous patching and upgrading dependencies in our future - either AI assisted or not.
 
 
-## AI will become more expensive
+### AI will become more expensive
 
 Billions, if not trillions, of dollars have been spent on AI: GPU infrastructure at scale is expensive.
 Currently, it's subsidised one way or another.
@@ -87,7 +87,7 @@ They must follow suit, and at some point charge the customer more to become prof
 I wonder at this point, if AI coding is still economically viable for most institutions?
 
 
-## Conclusion: people will come to realise it's not everything
+### Conclusion: we'll realise it's not everything
 
 Here, I'm talking about more general software companies, not the AI giants.
 While software is cheap to create now we have AI, it does not mean it is cheap to maintain in the future - especailly if prices rise.
@@ -120,14 +120,14 @@ Many incidents involve some kind of penalty or fine, either contractual (e.g., S
 Rebuilding reputation, if possible at all, is expensive.
 
 
-## Final thoughts
+### Final thoughts
 
 While I think AI agents will not take over software development, they do have great value as tools.
 
-Learning a new langauge or framework? Ask AI to create a project with detailed notes guiding you through it.
-Starting a new project? Ask the agent to create a skeleton.
-Need a quick script or *interal* tool? Put the agent in charge.
-Tricky bug? See if AI to can make sense of the mess.
+* Learning a new langauge or framework? Ask AI to create a project with detailed notes guiding you through it.
+* Starting a new project? Ask the agent to create a skeleton.
+* Need a quick script or *interal* tool? Put the agent in charge.
+* Tricky bug? See if AI to can make sense of the mess.
 
 I get it, I truly do - but it's a power tool, not a developer.
 
