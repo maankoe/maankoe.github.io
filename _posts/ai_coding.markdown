@@ -1,0 +1,133 @@
+---
+layout: post
+title:  "AI coding: June 2026"
+date:   2026-06-07
+categories: AI, coding, software engineering
+---
+
+
+# Introduction
+
+This is YAAI post, where I will attempt to outline some of my thoughts on AI coding.
+My perspectives have changed over the past year, and significantly in the past six or seven months.
+A year ago, the models were no good and harnesses weren't really there yet - it just wasn't useful in any meaningful way.
+Now, we have strong models, and even the smaller models perform great in the harnesses - you really can write code, and create tools and apps.
+They can write code and tests, execute them, analyse logs, create fixes, make PRs, everything.
+I can see the immediate value, and I use it almost every day in my work (no, I've not used it in writing this).
+
+I expect my perspectives will change further as time passes, so this is an attempt to take a snapshot.
+This is only really my thoughts - my *feelings* - and they are unlikely to be researched thoroughly, if at all.
+Much of what I have to say isn't novel, and probably not too interesting as a result.
+I choose to write them here as a matter of record for myself, to come back to in the future when some of the dust has settled one way or the other.
+I will attempt to write this as much in an off-the-dome style as possible, and do a light review at the end.
+
+
+## AI will improve
+
+The models will get better, as will the harnesses.
+AI will improve to be more capable, handle larger contexts, and produce fewer errors.
+The harnesses will improve to interate on a problem better, hit fewer cycles - even with the smaller models.
+We've seen this already - the smaller models like Haiku or GPT mini are sufficient for most tasks given a good harness.
+We might also finally be able to trust auto-approve and become more hands-off.
+
+Having said this, it probably goes without saying: the iterative improvements (in LLMs) will become smaller and smaller.
+I'll refrain from considering any RL developments, which could indeed bring another step-change.
+
+
+## More software, more features
+
+Historically, software has been expensive to create and maintain.
+It took huge teams of developers to produce, deploy, and keep large systems running.
+AI is touted to reduce this burden and allow us to create software at great pace.
+We already see this with the [uptick in use on github.com](https://github.blog/news-insights/company-news/an-update-on-github-availability/).
+Maybe this particular metric (volume of commits) has peaked already, but what I actually mean here is that companies will begin to ship more software with more features.
+
+I think we'll see more products on the market, in both B2B and B2C arenas.
+I also expect those products, and existing products, will be crammed with extra features because, why not - the AI makes it cheap.
+One quick example that comes to mind is [PewDiePie's odysseus](https://youtu.be/rAzT5lcezPs?si=hEoikIll7rUI7zp2) - "A self-hosted AI workspace", with everything you could imagine all in one place.
+At the time of writing, the project just about 1 week old and has fewer than 1000 commits, but has over [550 open PRs](https://github.com/pewdiepie-archdaemon/odysseus/pulls?q=is%3Apr+is%3Aopen+). 
+That's a lot of activity!
+
+I suspect it won't just be Youtube stars that get carried away vibe coding, hardened developers will do it too.
+I've done it in a small sense, the number of personal or team utility scripts and tools has grown significantly in the last few months.
+Some developers, and managers, will convince themselves they can do the same with the actual product.
+Companies, big and small, will start projects and ship products or features that would never have been considered even a few months ago - it's cheap to create software!
+Add in the insentivisation structure (mandating?) the use of AI agents, tokens, and requests - you have a recipe for huge numbers of lines of code to be generated.
+
+I am not being negative here, there are many intractable problems are now economical to solve thanks to AI.
+The tools we've created are useful, and we've wanted some of them for a long time - now we suddenly have the resources to create them.
+I simply expect the industry to explode with "productivity", without care or second thought for what is being produced.
+What worries me is maintainin it all in the long term.
+Even our internal tools will take some time from us when they break for whatever reason.
+
+
+## More bugs and exploits
+
+There are many laws of software development, but this now seems more relevant than ever: with more code comes more bugs.
+Software is now cheap to create with AI, so we're making more of it. 
+AI also has a tendency, in my experience, to write verbose, lengthy, code.
+Putting these together means we'll be seeing more bugs and more CVEs. 
+
+Couple this with AI being [really good at finding exploits](https://www.wired.com/story/ai-models-hacking-inflection-point/): we're in for a rough time.
+I see continuous patching and upgrading dependencies in our future - either AI assisted or not.
+
+
+## AI will become more expensive
+
+Billions, if not trillions, of dollars have been spent on AI: GPU infrastructure at scale is expensive.
+Currently, it's subsidised one way or another.
+At some point, the owners will want to recoup their investments.
+This is another thing we've already seen: Github's copilot changing [pricing model](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/).
+Microsoft/Github did this simply because the old request based pricing model was not sustainable for them.
+They were losing money and this is, presumably, what is required to make money in this business.
+Users weren't happy getting significantly [fewer tokens](https://arstechnica.com/ai/2026/06/ai-costs-how-much-github-copilot-users-react-to-new-usage-based-pricing-system/) and less throughput as a result.
+
+Other companies, Anthropic and OpenAI, are already using token based billing; but are surely losing money with current prices.
+They must follow suit, and at some point charge the customer more to become profitable.
+I wonder at this point, if AI coding is still economically viable for most institutions?
+
+
+## Conclusion: people will come to realise it's not everything
+
+Here, I'm talking about more general software companies, not the AI giants.
+While software is cheap to create now we have AI, it does not mean it is cheap to maintain in the future - especailly if prices rise.
+Software systems take blood, toil, tears, and sweat to build and keep running.
+This has not changed in the world of agents.
+
+If agents are writing the code, you have two choices:
+
+1. Read it thoroughly and understand it, or
+2. Give into the vibes completely.
+
+I'm purposefully not considering spec-driven-development here - specifications are almost always wrong, and waterfall doesn't work.
+Fast feedback cycles is by far the most effective mechanism for developing software systems.
+Anything the gets in the way of this, i.e., taking time to write a detailed specification, is wrong.
+It's also worth mentioning here, any sufficiently detailed specification looks a lot like code.
+
+If you're reading the code thoroughly you've immediately sacrificed some of the speed up using AI is supposed to provide.
+In this case I'm not personally convinced there is much gain (if any) in speed at all - it's a different experience, and a slightly different skill set, but not significantly faster.
+Factoring in the cost, I simply do not get it for software generation.
+
+The alternative then, is to give in and vibe up.
+Agents can code, review, and then take any residing issues too, have at it.
+It worries me, however, that in this case the AI may be all bark and no byte.
+The AI can easily go off and fix the issue for you, only to leave others - sometimes ones it's previously fixed!
+Some bugs span systems, and context is most certainly limited (although the model guys will advertise differently).
+Furthermore, in this case, you don't understand the system - you've relinquished the controls, you have no power here.
+
+On top of this, bugs cause incidents, and incidents erode trust and hurts reputation. 
+Many incidents involve some kind of penalty or fine, either contractual (e.g., SLAs) or regulatory (e.g., GDPR).
+Rebuilding reputation, if possible at all, is expensive.
+
+
+## Final thoughts
+
+While I think AI agents will not take over software development, they do have great value as tools.
+
+Learning a new langauge or framework? Ask AI to create a project with detailed notes guiding you through it.
+Starting a new project? Ask the agent to create a skeleton.
+Need a quick script or *interal* tool? Put the agent in charge.
+Tricky bug? See if AI to can make sense of the mess.
+
+I get it, I truly do - but it's a power tool, not a developer.
+
